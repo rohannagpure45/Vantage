@@ -130,7 +130,7 @@ export default function SynthesisPanel({
       </CardHeader>
       <CardContent className="overflow-y-auto">
         {synthesisText ? (
-          <div className="prose prose-invert prose-sm max-w-none">
+          <div className="prose prose-invert prose-sm max-w-none [overflow-wrap:break-word]">
             <ReactMarkdown>{synthesisText}</ReactMarkdown>
           </div>
         ) : (

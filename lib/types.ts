@@ -146,6 +146,19 @@ export type LayerName =
 
 export type LayerToggleState = Record<LayerName, boolean>;
 
+// ── Time Horizon ──────────────────────────────────────────────────
+
+export type TimeHorizonKey = "1_day" | "1_week" | "1_month" | "6_months" | "1_year";
+
+export interface TimeVariant {
+  label: string;
+  compound_risk_score: number;
+  summary: string;
+  country_impacts: Record<string, number>;
+}
+
+export type TimeVariants = Record<TimeHorizonKey, TimeVariant>;
+
 // ── View State (Map Camera) ────────────────────────────────────────
 
 export interface ViewState {

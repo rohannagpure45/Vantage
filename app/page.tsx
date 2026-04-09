@@ -1,15 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import dynamic from "next/dynamic";
 import { useAnalysis } from "@/hooks/use-analysis";
 import ScenarioInput from "@/components/sidebar/ScenarioInput";
 import AgentPanelGroup from "@/components/sidebar/AgentPanelGroup";
 import SynthesisPanel from "@/components/sidebar/SynthesisPanel";
 import RegionDetail from "@/components/sidebar/RegionDetail";
+import TimeHorizonSelector from "@/components/sidebar/TimeHorizonSelector";
 import MapControls from "@/components/map/MapControls";
 import MapLegend from "@/components/map/MapLegend";
-import type { ViewState, LayerName, LayerToggleState, AgentName } from "@/lib/types";
+import type { ViewState, LayerName, LayerToggleState, AgentName, TimeHorizonKey } from "@/lib/types";
 import { RISK_SCORE_THRESHOLDS } from "@/components/sidebar/constants";
 
 // ── Dynamic import MapView (no SSR for MapLibre + deck.gl) ──────────
@@ -18,7 +19,10 @@ const MapView = dynamic(() => import("@/components/map/MapView"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center bg-background">
-      <div className="text-muted-foreground">Loading map...</div>
+      <div className="flex flex-col items-center gap-3">
+        <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full spinner" />
+        <span className="text-sm text-muted-foreground">Loading map...</span>
+      </div>
     </div>
   ),
 });
@@ -149,7 +153,67 @@ export default function Home() {
   // Layer toggles
   const [layerToggles, setLayerToggles] = useState<LayerToggleState>(DEFAULT_LAYER_TOGGLES);
 
+  // Resizable synthesis panel
+  const [synthesisPanelHeight, setSynthesisPanelHeight] = useState(240);
+  const isDraggingRef = useRef(false);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDraggingRef.current || !sidebarRef.current) return;
+      const sidebarRect = sidebarRef.current.getBoundingClientRect();
+      const newHeight = sidebarRect.bottom - e.clientY;
+      setSynthesisPanelHeight(Math.max(100, Math.min(newHeight, sidebarRect.height - 120)));
+    };
+    const handleMouseUp = () => {
+      if (isDraggingRef.current) {
+        isDraggingRef.current = false;
+        document.body.style.cursor = "";
+        document.body.style.userSelect = "";
+      }
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, []);
+
+  const handleResizeStart = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDraggingRef.current = true;
+    document.body.style.cursor = "row-resize";
+    document.body.style.userSelect = "none";
+  }, []);
+
   const isAnalyzing = analysis.status === "analyzing";
+
+  // ── Time horizon overrides ─────────────────────────────────────────
+
+  const impactOverrides = useMemo(() => {
+    if (!analysis.selectedHorizon || !analysis.timeVariants) return undefined;
+    const variant = analysis.timeVariants[analysis.selectedHorizon];
+    if (!variant?.country_impacts) return undefined;
+    const map = new Map<string, number>();
+    for (const [iso3, score] of Object.entries(variant.country_impacts)) {
+      map.set(iso3, score as number);
+    }
+    return map;
+  }, [analysis.selectedHorizon, analysis.timeVariants]);
+
+  const effectiveRiskScore = useMemo(() => {
+    if (analysis.selectedHorizon && analysis.timeVariants) {
+      const variant = analysis.timeVariants[analysis.selectedHorizon];
+      if (variant) return variant.compound_risk_score;
+    }
+    return analysis.compoundRiskScore;
+  }, [analysis.selectedHorizon, analysis.timeVariants, analysis.compoundRiskScore]);
+
+  const horizonSummary = useMemo(() => {
+    if (!analysis.selectedHorizon || !analysis.timeVariants) return null;
+    return analysis.timeVariants[analysis.selectedHorizon]?.summary ?? null;
+  }, [analysis.selectedHorizon, analysis.timeVariants]);
 
   // ── Load GeoJSON on mount ───────────────────────────────────────────
 
@@ -249,6 +313,7 @@ export default function Home() {
         }
       } catch (err) {
         console.error("Error fetching country data:", err);
+        setCountryData(null);
       } finally {
         setCountryDataLoading(false);
       }
@@ -279,8 +344,17 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-4">
-          <RiskScoreBadge score={analysis.compoundRiskScore} />
-          <TimeHorizonBadge horizon={analysis.orchestratorOutput?.time_horizon} />
+          <RiskScoreBadge score={effectiveRiskScore} />
+          {analysis.timeVariants && analysis.status !== "idle" && (
+            <TimeHorizonSelector
+              selected={analysis.selectedHorizon}
+              onChange={analysis.setSelectedHorizon}
+              disabled={isAnalyzing}
+            />
+          )}
+          {!analysis.timeVariants && (
+            <TimeHorizonBadge horizon={analysis.orchestratorOutput?.time_horizon} />
+          )}
         </div>
       </header>
 
@@ -296,6 +370,7 @@ export default function Home() {
             onCountryClick={handleCountryClick}
             layerToggles={layerToggles}
             countriesGeoJSON={countriesGeoJSON ?? undefined}
+            impactOverrides={impactOverrides}
           />
           <MapControls layerToggles={layerToggles} onToggle={handleLayerToggle} />
           <MapLegend />
@@ -314,14 +389,15 @@ export default function Home() {
           </div>
 
           {/* Sidebar Content (state machine) */}
-          <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div ref={sidebarRef} className="flex-1 min-h-0 flex flex-col overflow-hidden">
             {/* Region Detail View */}
             {sidebarView === "regionDetail" && selectedCountry && (
               <div className="flex-1 overflow-y-auto p-4 animate-slide-in-right">
                 {countryDataLoading ? (
                   <div className="flex items-center justify-center h-32">
-                    <div className="text-sm text-muted-foreground shimmer p-4 rounded">
-                      Loading country data...
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full spinner" />
+                      <span className="text-sm text-muted-foreground">Loading country data...</span>
                     </div>
                   </div>
                 ) : (
@@ -349,14 +425,37 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="flex-shrink-0 max-h-[280px] overflow-y-auto border-t border-border">
+                {/* Drag handle */}
+                <div
+                  onMouseDown={handleResizeStart}
+                  className="flex-shrink-0 h-2 cursor-row-resize flex items-center justify-center group hover:bg-accent/30 transition-colors"
+                >
+                  <div className="w-10 h-0.5 rounded-full bg-border group-hover:bg-muted-foreground transition-colors" />
+                </div>
+
+                <div
+                  className="flex-shrink-0 overflow-y-auto border-t border-border"
+                  style={{ height: synthesisPanelHeight }}
+                >
                   <SynthesisPanel
-                    synthesisText={analysis.synthesisText}
-                    compoundRiskScore={analysis.compoundRiskScore}
+                    synthesisText={horizonSummary ?? analysis.synthesisText}
+                    compoundRiskScore={effectiveRiskScore}
                     isComplete={analysis.status === "complete"}
                   />
                 </div>
               </>
+            )}
+
+            {/* Error State */}
+            {analysis.status === "error" && (
+              <div className="mx-4 mt-2 p-3 rounded-lg bg-red-500/10 border border-red-500/30 animate-fade-in">
+                <div className="flex items-center gap-2 text-red-400 text-xs font-medium mb-1">
+                  <span>&#9888;</span> Analysis Error
+                </div>
+                <p className="text-xs text-red-300/80">
+                  {analysis.errors[analysis.errors.length - 1]?.message || "An unexpected error occurred"}
+                </p>
+              </div>
             )}
 
             {/* Idle State */}

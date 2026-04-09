@@ -6,6 +6,8 @@ import type {
   AgentStatus,
   AgentResults,
   AnalysisState,
+  TimeVariants,
+  TimeHorizonKey,
 } from "@/lib/types";
 import type {
   OrchestratorOutput,
@@ -45,6 +47,9 @@ export interface UseAnalysisReturn extends AnalysisState {
   pipelineStatus: PipelineStatus;
   pipelineMessage: string;
   synthesisStatus: AgentStatus;
+  timeVariants: TimeVariants | null;
+  selectedHorizon: TimeHorizonKey | null;
+  setSelectedHorizon: (horizon: TimeHorizonKey | null) => void;
 }
 
 export function useAnalysis(): UseAnalysisReturn {
@@ -62,6 +67,8 @@ export function useAnalysis(): UseAnalysisReturn {
   const [pipelineStatus, setPipelineStatus] = useState<PipelineStatus>("idle");
   const [pipelineMessage, setPipelineMessage] = useState("");
   const [synthesisStatus, setSynthesisStatus] = useState<AgentStatus>("idle");
+  const [timeVariants, setTimeVariants] = useState<TimeVariants | null>(null);
+  const [selectedHorizon, setSelectedHorizon] = useState<TimeHorizonKey | null>(null);
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
@@ -129,6 +136,8 @@ export function useAnalysis(): UseAnalysisReturn {
     setPipelineStatus("idle");
     setPipelineMessage("");
     setSynthesisStatus("idle");
+    setTimeVariants(null);
+    setSelectedHorizon(null);
   }, []);
 
   const analyzeScenario = useCallback(async (inputScenario: string) => {
@@ -234,6 +243,16 @@ export function useAnalysis(): UseAnalysisReturn {
                   break;
                 }
 
+                case "time_variants": {
+                  const variants = data as TimeVariants;
+                  setTimeVariants(variants);
+                  // Default to 1-day view when variants arrive
+                  if (variants["1_day"]) {
+                    setSelectedHorizon("1_day");
+                  }
+                  break;
+                }
+
                 case "complete": {
                   const { compound_risk_score } = data;
                   setCompoundRiskScore(compound_risk_score);
@@ -316,5 +335,8 @@ export function useAnalysis(): UseAnalysisReturn {
     pipelineStatus,
     pipelineMessage,
     synthesisStatus,
+    timeVariants,
+    selectedHorizon,
+    setSelectedHorizon,
   };
 }

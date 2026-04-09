@@ -45,6 +45,7 @@ export interface MapViewProps {
   onCountryClick: (iso3: string) => void;
   layerToggles: LayerToggleState;
   countriesGeoJSON?: GeoJSON.FeatureCollection;
+  impactOverrides?: Map<string, number>;
 }
 
 export default function MapView({
@@ -55,6 +56,7 @@ export default function MapView({
   onCountryClick,
   layerToggles,
   countriesGeoJSON,
+  impactOverrides,
 }: MapViewProps) {
   const mapRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -121,7 +123,7 @@ export default function MapView({
 
     if (layerToggles.choropleth && countriesGeoJSON) {
       deckLayers.push(
-        createChoroplethLayer(countriesGeoJSON, agentResults, selectedCountry)
+        createChoroplethLayer(countriesGeoJSON, agentResults, selectedCountry, impactOverrides)
       );
     }
 
@@ -171,7 +173,7 @@ export default function MapView({
     }
 
     return deckLayers;
-  }, [layerToggles, agentResults, selectedCountry, countriesGeoJSON]);
+  }, [layerToggles, agentResults, selectedCountry, countriesGeoJSON, impactOverrides]);
 
   // Conflict layer depends on pulsingRadius — separate memo so only this
   // layer rebuilds on animation ticks.

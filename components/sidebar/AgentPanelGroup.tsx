@@ -54,12 +54,12 @@ export default function AgentPanelGroup({
       onValueChange={(value) => onTabChange(value as AgentName | "synthesis")}
       className="flex flex-col h-full"
     >
-      <TabsList className="flex flex-wrap gap-1 h-auto p-1 bg-transparent border-b border-border rounded-none">
+      <TabsList className="flex flex-nowrap gap-1 h-auto p-1 bg-transparent border-b border-border rounded-none">
         {AGENTS.map((agent) => (
           <TabsTrigger
             key={agent}
             value={agent}
-            className="flex items-center gap-1 px-2 py-1 text-xs data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
+            className="flex items-center gap-1 px-2 py-1 text-xs data-[state=active]:bg-accent data-[state=active]:text-accent-foreground hover:bg-accent/50 hover:text-accent-foreground transition-colors"
           >
             <span
               className="w-2 h-2 rounded-full"
@@ -71,7 +71,7 @@ export default function AgentPanelGroup({
         ))}
         <TabsTrigger
           value="synthesis"
-          className="flex items-center gap-1 px-2 py-1 text-xs data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
+          className="flex items-center gap-1 px-2 py-1 text-xs data-[state=active]:bg-accent data-[state=active]:text-accent-foreground hover:bg-accent/50 hover:text-accent-foreground transition-colors"
         >
           {AGENT_LABELS.synthesis}
           <TabStatusIndicator status={synthesisStatus} />

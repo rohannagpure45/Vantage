@@ -4,6 +4,7 @@ export const GOLDEN_PATH_SCENARIOS = {
   suez: "Suez Canal blocked + South Asian heat wave",
   texas: "Texas grid failure during winter storm",
   greenland: "Accelerated Greenland ice sheet collapse",
+  iran_ceasefire: "USA-Iran ceasefire: oil, agriculture & humanitarian impact",
 } as const;
 
 export const AGENT_LABELS: Record<AgentName | "synthesis", string> = {

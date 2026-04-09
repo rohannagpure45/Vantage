@@ -11,6 +11,7 @@ const SCENARIO_TO_FALLBACK: Record<string, string> = {
   [GOLDEN_PATH_SCENARIOS.suez]: "fallback-suez",
   [GOLDEN_PATH_SCENARIOS.texas]: "fallback-texas",
   [GOLDEN_PATH_SCENARIOS.greenland]: "fallback-greenland",
+  [GOLDEN_PATH_SCENARIOS.iran_ceasefire]: "fallback-iran-ceasefire",
 };
 
 export interface FallbackData {
@@ -18,6 +19,7 @@ export interface FallbackData {
   orchestrator: Record<string, unknown>;
   agentResults: Record<string, Record<string, unknown>>;
   synthesis: Record<string, unknown>;
+  timeVariants?: Record<string, unknown>;
 }
 
 /**
@@ -107,7 +109,13 @@ export async function replayFallback(
   send("agent_complete", { agent: "synthesis", structured: data.synthesis, narrative: synthesisNarrative });
   await sleep(delay);
 
-  // 4. Complete
+  // 4. Time variants (if available)
+  if (data.timeVariants) {
+    send("time_variants", data.timeVariants);
+    await sleep(delay);
+  }
+
+  // 5. Complete
   const compoundRiskScore = (data.synthesis as { compound_risk_score?: number }).compound_risk_score ?? 0;
   send("complete", { compound_risk_score: compoundRiskScore });
 }

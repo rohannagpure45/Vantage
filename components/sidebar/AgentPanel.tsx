@@ -48,7 +48,7 @@ const AgentPanel = React.memo(function AgentPanel({
         <StatusIndicator status={status} />
       </div>
       
-      <div className="flex-1 overflow-y-auto mt-3 prose prose-invert prose-sm max-w-none">
+      <div className="flex-1 overflow-y-auto mt-3 prose prose-invert prose-sm max-w-none [overflow-wrap:break-word]">
         {status === "idle" ? (
           <span className="text-muted-foreground text-sm">
             Waiting for analysis...

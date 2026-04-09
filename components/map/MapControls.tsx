@@ -48,6 +48,8 @@ export default function MapControls({ layerToggles, onToggle }: MapControlsProps
                   }
                 `}
                 style={isActive ? { borderColor: layer.color } : {}}
+                aria-label={`Toggle ${layer.label} layer`}
+                aria-pressed={isActive}
                 title={layer.label}
               >
                 <span style={{ color: isActive ? layer.color : "currentColor" }}>

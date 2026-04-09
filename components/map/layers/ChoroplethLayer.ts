@@ -88,10 +88,11 @@ export function buildImpactMap(agentResults: AgentResults): Map<string, number> 
 export function createChoroplethLayer(
   countriesGeoJSON: GeoJSON.FeatureCollection,
   agentResults: AgentResults,
-  selectedCountry: string | null
+  selectedCountry: string | null,
+  impactOverrides?: Map<string, number>
 ) {
-  // Build O(1) lookup once instead of per-country .find() calls
-  const impactMap = buildImpactMap(agentResults);
+  // Use overrides if provided (time horizon selection), else compute from agent results
+  const impactMap = impactOverrides ?? buildImpactMap(agentResults);
 
   const dataWithImpact = countriesGeoJSON.features.map((feature) => {
     const iso3 = feature.properties?.ISO_A3;
@@ -155,9 +156,9 @@ export function createChoroplethLayer(
       },
     },
     updateTriggers: {
-      getFillColor: [agentResults, selectedCountry],
+      getFillColor: [agentResults, selectedCountry, impactOverrides],
       getLineColor: [selectedCountry],
-      getElevation: [agentResults],
+      getElevation: [agentResults, impactOverrides],
     },
   };
 

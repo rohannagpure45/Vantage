@@ -234,7 +234,36 @@ body {
   animation: slideInRight 0.3s ease-out forwards;
 }
 
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .spinner,
+  .shimmer,
+  .animate-pulse-gentle,
+  .animate-ping,
+  .animate-fade-in,
+  .animate-slide-in-right {
+    animation: none !important;
+  }
+  .transition-smooth,
+  .transition-colors,
+  .transition-transform,
+  .hover-lift {
+    transition: none !important;
+  }
+}
+
+/* Focus Ring Styling */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
 /* Scrollbar Styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
