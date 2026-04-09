@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import { useAnalysis } from "@/hooks/use-analysis";
 import ScenarioInput from "@/components/sidebar/ScenarioInput";
 import AgentPanelGroup from "@/components/sidebar/AgentPanelGroup";
-import SynthesisPanel from "@/components/sidebar/SynthesisPanel";
 import RegionDetail from "@/components/sidebar/RegionDetail";
 import TimeHorizonSelector from "@/components/sidebar/TimeHorizonSelector";
 import MapControls from "@/components/map/MapControls";
