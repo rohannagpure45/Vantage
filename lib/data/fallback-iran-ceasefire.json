@@ -1,0 +1,1195 @@
+{
+  "scenario": "USA-Iran ceasefire: oil, agriculture & humanitarian impact",
+  "orchestrator": {
+    "scenario_summary": "The USA-Iran ceasefire brokered by Pakistan on April 7, 2026 halts 40 days of conflict that closed the Strait of Hormuz. Oil crashes 16%, global markets rally, but fertilizer disruptions continue to impact corn, soybean, and ethanol markets while 884,000+ displaced civilians await humanitarian relief.",
+    "primary_regions": [
+      "USA",
+      "IRN"
+    ],
+    "secondary_regions": [
+      "SAU",
+      "ARE",
+      "IRQ",
+      "PAK",
+      "CHN",
+      "IND",
+      "BRA",
+      "DEU",
+      "LBN",
+      "ISR",
+      "YEM"
+    ],
+    "coordinates": {
+      "lat": 27.0,
+      "lon": 53.0
+    },
+    "zoom_level": 4,
+    "time_horizon": "months",
+    "severity": 6,
+    "event_categories": [
+      "geopolitical",
+      "economic"
+    ],
+    "context_queries": {
+      "geopolitics": "USA Iran ceasefire Pakistan mediation nuclear diplomacy 2026",
+      "economy": "oil prices crash Strait of Hormuz shipping recovery corn soybean ethanol 2026",
+      "food": "fertilizer prices urea Hormuz corn soybean agriculture impact 2026",
+      "infrastructure": "Strait of Hormuz reopening tanker backlog shipping insurance 2026",
+      "civilian": "Iran war casualties displacement humanitarian ceasefire recovery 2026"
+    }
+  },
+  "agentResults": {
+    "geopolitics": {
+      "affected_countries": [
+        {
+          "iso3": "USA",
+          "impact_score": 6,
+          "stance": "allied",
+          "key_concerns": [
+            "Ceasefire fragility — no formal text released",
+            "15-point counter-plan demands Iran surrender enriched uranium",
+            "Lebanon front unresolved — Hezbollah rockets continue"
+          ],
+          "alliance_impacts": [
+            "VP Vance and Kushner lead Islamabad negotiations",
+            "UK PM Starmer convening 35-40 nation Hormuz coalition",
+            "IAEA welcomes return to nuclear diplomacy"
+          ]
+        },
+        {
+          "iso3": "IRN",
+          "impact_score": 7,
+          "stance": "destabilized",
+          "key_concerns": [
+            "10-point plan demands full sanctions removal and war reparations",
+            "Exploring Hormuz toll system at $1-2M per ship",
+            "67,414 civilian sites struck including 498 schools"
+          ],
+          "alliance_impacts": [
+            "Pakistan-mediated ceasefire strengthens Islamabad's regional role",
+            "Russia welcomes diplomacy, hopes for Ukraine talk momentum",
+            "China back-channeling energy security guarantees"
+          ]
+        },
+        {
+          "iso3": "SAU",
+          "impact_score": 5,
+          "stance": "neutral",
+          "key_concerns": [
+            "Gulf shipping recovery timeline uncertain",
+            "Oil revenue volatility as Brent swings between $80-$120",
+            "Increased tanker traffic in post-ceasefire congestion"
+          ],
+          "alliance_impacts": [
+            "OPEC+ pledged 206,000 bpd output increase",
+            "Saudi-Iran détente could accelerate with peace",
+            "GCC states coordinating on Hormuz reopening logistics"
+          ]
+        },
+        {
+          "iso3": "LBN",
+          "impact_score": 6,
+          "stance": "destabilized",
+          "key_concerns": [
+            "Pakistan says ceasefire covers Lebanon — Israel disagrees",
+            "1,784 killed and 5,977 wounded by Israeli strikes",
+            "Hezbollah continues rocket attacks despite ceasefire"
+          ],
+          "alliance_impacts": [
+            "Lebanon front is the primary ceasefire spoiler risk",
+            "UN peacekeepers struggling to enforce border zone",
+            "Iran-backed proxy network complicates clean resolution"
+          ]
+        },
+        {
+          "iso3": "CHN",
+          "impact_score": 4,
+          "stance": "neutral",
+          "key_concerns": [
+            "Energy security dependency on Gulf imports",
+            "Back-channel diplomacy to secure oil supply",
+            "Belt and Road overland corridor acceleration"
+          ],
+          "alliance_impacts": [
+            "Soybean Diplomacy framework with US provides diplomatic leverage",
+            "BRICS coordination on alternative energy routes",
+            "Strengthening ties with Pakistan as ceasefire mediator"
+          ]
+        },
+        {
+          "iso3": "IND",
+          "impact_score": 4,
+          "stance": "neutral",
+          "key_concerns": [
+            "70% of oil imports transit Strait of Hormuz",
+            "Fertilizer import dependency on Gulf producers",
+            "Balancing relations between US and Iran"
+          ],
+          "alliance_impacts": [
+            "Quad alliance energy security discussions accelerated",
+            "Chabahar port development with Iran complicated",
+            "Non-aligned stance maintained through ceasefire"
+          ]
+        },
+        {
+          "iso3": "PAK",
+          "impact_score": 5,
+          "stance": "allied",
+          "key_concerns": [
+            "Ceasefire mediator role elevates regional standing",
+            "Border security with Iran during conflict",
+            "Managing refugee flows from Iranian displacement"
+          ],
+          "alliance_impacts": [
+            "Pakistan-mediated ceasefire strengthens Islamabad globally",
+            "China-Pakistan Economic Corridor gains strategic importance",
+            "US-Pakistan relations improve through mediation success"
+          ]
+        },
+        {
+          "iso3": "IRQ",
+          "impact_score": 6,
+          "stance": "destabilized",
+          "key_concerns": [
+            "Caught between US military presence and Iran influence",
+            "109 killed in cross-border strikes",
+            "Militia activity along Iran border"
+          ],
+          "alliance_impacts": [
+            "Iraqi sovereignty challenged by both sides",
+            "Kurdish regions face dual pressure",
+            "Iranian proxy networks disrupted by ceasefire"
+          ]
+        },
+        {
+          "iso3": "ARE",
+          "impact_score": 4,
+          "stance": "neutral",
+          "key_concerns": [
+            "Port congestion from diverted shipping",
+            "25+ killed across Gulf states",
+            "Economic hub status threatened by regional instability"
+          ],
+          "alliance_impacts": [
+            "GCC coordination on Hormuz reopening logistics",
+            "Abraham Accords diplomacy complicated by conflict",
+            "UAE positioned as neutral trade hub post-ceasefire"
+          ]
+        },
+        {
+          "iso3": "DEU",
+          "impact_score": 3,
+          "stance": "allied",
+          "key_concerns": [
+            "European energy crisis from Hormuz closure",
+            "Manufacturing slowdown from supply chain disruption",
+            "Diplomatic pressure to support ceasefire framework"
+          ],
+          "alliance_impacts": [
+            "EU unified stance on sanctions relief negotiations",
+            "NATO logistics coordination for Gulf stability",
+            "German industrial lobby pushing for rapid Hormuz reopening"
+          ]
+        },
+        {
+          "iso3": "BRA",
+          "impact_score": 2,
+          "stance": "neutral",
+          "key_concerns": [
+            "Commodity export boom from supply disruption",
+            "Soybean Diplomacy benefits Brazilian exporters",
+            "Ethanol export opportunity from high oil prices"
+          ],
+          "alliance_impacts": [
+            "BRICS coordination on energy security",
+            "Brazil positioned as alternative commodity supplier",
+            "South-South trade routes gain importance"
+          ]
+        },
+        {
+          "iso3": "YEM",
+          "impact_score": 8,
+          "stance": "destabilized",
+          "key_concerns": [
+            "Gulf shipping disruption cuts food lifeline",
+            "Houthi involvement in proxy conflict",
+            "Humanitarian corridor through Red Sea threatened"
+          ],
+          "alliance_impacts": [
+            "UN humanitarian access depends on Hormuz recovery",
+            "Saudi-led coalition operations complicated",
+            "Yemen peace process set back by regional conflict"
+          ]
+        },
+        {
+          "iso3": "ISR",
+          "impact_score": 8,
+          "stance": "opposed",
+          "key_concerns": [
+            "Lebanon front remains active despite ceasefire — Hezbollah rockets continue",
+            "Israel disputes Pakistan's claim that ceasefire covers Lebanon theater",
+            "IDF maintains heightened alert along northern border with 50,000 reservists",
+            "Iran nuclear program acceleration feared during diplomatic window",
+            "Gaza reconstruction demands compete with northern security budget"
+          ],
+          "alliance_impacts": [
+            "US pressure to accept Lebanon ceasefire terms straining alliance",
+            "Abraham Accords partners (UAE, Bahrain) cautiously re-engaging Iran",
+            "Israeli intelligence sharing with Gulf states intensifies on Iran compliance monitoring"
+          ]
+        }
+      ],
+      "conflict_zones": [
+        {
+          "coordinates": [
+            56.27,
+            26.57
+          ],
+          "radius_km": 120,
+          "intensity": 5,
+          "type": "tension"
+        },
+        {
+          "coordinates": [
+            35.5,
+            33.87
+          ],
+          "radius_km": 60,
+          "intensity": 7,
+          "type": "active_conflict"
+        },
+        {
+          "coordinates": [
+            51.39,
+            35.69
+          ],
+          "radius_km": 80,
+          "intensity": 4,
+          "type": "diplomatic_crisis"
+        },
+        {
+          "coordinates": [
+            67.01,
+            33.69
+          ],
+          "radius_km": 50,
+          "intensity": 3,
+          "type": "diplomatic_crisis"
+        },
+        {
+          "coordinates": [
+            35.2,
+            33.3
+          ],
+          "radius_km": 80,
+          "intensity": 7,
+          "type": "active_conflict"
+        }
+      ],
+      "narrative": "The USA-Iran ceasefire, mediated by Pakistan on April 7, 2026, halts the most significant military confrontation in the Persian Gulf since 2003. After 40 days of conflict that saw over 11,000 U.S. Central Command targets struck, the ceasefire remains extremely fragile — described by analysts at King's College London as 'extremely shaky and brittle' with no official text released.\n\nThe diplomatic landscape is split on critical issues. Iran's 10-point plan demands complete U.S. troop withdrawal, full sanctions removal, and war reparations. The U.S. counter-plan insists Iran surrender all enriched uranium, dismantle proxy groups, and fully reopen the Strait of Hormuz. VP JD Vance, Steve Witkoff, and Jared Kushner are leading negotiations in Islamabad beginning April 10.\n\nThe Lebanon front poses the greatest escalation risk. While Pakistan insists the ceasefire covers all fronts including Lebanon, Israel explicitly disagrees. Hezbollah launched rockets into northern Israel on April 9 despite the ceasefire, and Israel continues strikes on Hezbollah positions. This unresolved front could unravel the entire agreement.\n\nBCA Research predicts fighting could reignite 'later this year, if not later this month,' reflecting the deep trust deficit between Washington and Tehran following the 2018 JCPOA withdrawal. The IAEA has welcomed the return to diplomacy, but the nuclear dimension — Iran's insistence on enrichment rights vs. Israel's demand for total denuclearization — remains the core unresolved tension."
+    },
+    "economy": {
+      "affected_countries": [
+        {
+          "iso3": "USA",
+          "gdp_impact_pct": 0.3,
+          "trade_disruption": 5,
+          "key_sectors": [
+            "energy",
+            "agriculture",
+            "biofuels",
+            "defense"
+          ],
+          "unemployment_risk": "low"
+        },
+        {
+          "iso3": "IRN",
+          "gdp_impact_pct": -12.5,
+          "trade_disruption": 10,
+          "key_sectors": [
+            "oil and gas",
+            "petrochemicals",
+            "agriculture"
+          ],
+          "unemployment_risk": "severe"
+        },
+        {
+          "iso3": "CHN",
+          "gdp_impact_pct": -0.4,
+          "trade_disruption": 6,
+          "key_sectors": [
+            "energy imports",
+            "manufacturing",
+            "shipping"
+          ],
+          "unemployment_risk": "low"
+        },
+        {
+          "iso3": "DEU",
+          "gdp_impact_pct": -0.6,
+          "trade_disruption": 5,
+          "key_sectors": [
+            "energy",
+            "manufacturing",
+            "chemicals"
+          ],
+          "unemployment_risk": "low"
+        },
+        {
+          "iso3": "BRA",
+          "gdp_impact_pct": 0.5,
+          "trade_disruption": 3,
+          "key_sectors": [
+            "soybeans",
+            "corn",
+            "ethanol",
+            "agriculture"
+          ],
+          "unemployment_risk": "low"
+        },
+        {
+          "iso3": "SAU",
+          "gdp_impact_pct": -1.8,
+          "trade_disruption": 7,
+          "key_sectors": [
+            "oil and gas",
+            "petrochemicals",
+            "shipping"
+          ],
+          "unemployment_risk": "medium"
+        },
+        {
+          "iso3": "IND",
+          "gdp_impact_pct": -0.7,
+          "trade_disruption": 6,
+          "key_sectors": [
+            "energy imports",
+            "fertilizer",
+            "manufacturing"
+          ],
+          "unemployment_risk": "medium"
+        },
+        {
+          "iso3": "ARE",
+          "gdp_impact_pct": -1.2,
+          "trade_disruption": 6,
+          "key_sectors": [
+            "logistics",
+            "tourism",
+            "oil re-export"
+          ],
+          "unemployment_risk": "low"
+        },
+        {
+          "iso3": "LBN",
+          "gdp_impact_pct": -4.5,
+          "trade_disruption": 8,
+          "key_sectors": [
+            "banking",
+            "tourism",
+            "trade"
+          ],
+          "unemployment_risk": "severe"
+        },
+        {
+          "iso3": "IRQ",
+          "gdp_impact_pct": -2.3,
+          "trade_disruption": 7,
+          "key_sectors": [
+            "oil exports",
+            "agriculture",
+            "reconstruction"
+          ],
+          "unemployment_risk": "high"
+        },
+        {
+          "iso3": "PAK",
+          "gdp_impact_pct": -0.5,
+          "trade_disruption": 5,
+          "key_sectors": [
+            "energy imports",
+            "textiles",
+            "remittances"
+          ],
+          "unemployment_risk": "medium"
+        },
+        {
+          "iso3": "YEM",
+          "gdp_impact_pct": -8.0,
+          "trade_disruption": 9,
+          "key_sectors": [
+            "food imports",
+            "fuel",
+            "humanitarian aid"
+          ],
+          "unemployment_risk": "severe"
+        },
+        {
+          "iso3": "ISR",
+          "gdp_impact_pct": -1.8,
+          "trade_disruption": 6,
+          "key_sectors": [
+            "defense spending surge (+$4.2B emergency allocation)",
+            "tech sector IPOs frozen — $2.1B in delayed listings",
+            "tourism revenue down 67% — Mediterranean corridor closed",
+            "diamond and pharma exports rerouted from Haifa port",
+            "shekel volatility at 18-month high against USD"
+          ],
+          "unemployment_risk": "medium"
+        }
+      ],
+      "trade_routes_disrupted": [
+        {
+          "from": [
+            56.27,
+            26.57
+          ],
+          "to": [
+            121.47,
+            31.23
+          ],
+          "commodity": "Crude oil (Hormuz → China)",
+          "severity": 7
+        },
+        {
+          "from": [
+            56.27,
+            26.57
+          ],
+          "to": [
+            4.48,
+            51.92
+          ],
+          "commodity": "LNG and crude (Hormuz → Europe)",
+          "severity": 7
+        },
+        {
+          "from": [
+            -90.05,
+            41.85
+          ],
+          "to": [
+            121.47,
+            31.23
+          ],
+          "commodity": "Soybeans (US → China soybean diplomacy)",
+          "severity": 3
+        },
+        {
+          "from": [
+            56.27,
+            26.57
+          ],
+          "to": [
+            -95.36,
+            29.76
+          ],
+          "commodity": "Urea fertilizer (Gulf → US agriculture)",
+          "severity": 6
+        },
+        {
+          "from": [
+            -46.63,
+            -23.55
+          ],
+          "to": [
+            4.48,
+            51.92
+          ],
+          "commodity": "Ethanol and soybeans (Brazil → Europe)",
+          "severity": 3
+        }
+      ],
+      "narrative": "The ceasefire triggered the most dramatic single-day market reversal in years. On April 7, WTI crude crashed 16.4% to $94.41 — the biggest drop since April 2020 — while Brent fell 13.3% to $94.75. The Dow surged 1,325 points (+2.85%), the S&P 500 gained 2.51%, and airlines exploded: Delta +12%, American Airlines +11%, JetBlue +9%. Global markets followed: South Korea's Kospi rose 6.87%, Japan's Nikkei 5.39%, Germany's DAX 5.06%.\n\nHowever, the commodity story is more complex. Oil remains elevated at $94-100/barrel versus the pre-war $67, because Hormuz is still effectively closed. Only 8 ships transited on ceasefire day versus the normal 100-120. Some 187 tankers carrying 172 million barrels remain trapped inside the Gulf. EIA projects Brent above $95 for two more months, dropping below $80 by Q3.\n\nThe agricultural impact is cascading through U.S. farm country. Urea fertilizer prices surged from $500 to over $650/mt, with spot markets above $800, because 27-30% of global fertilizer exports transit Hormuz. This 'Fertilizer Crunch of 2026' is driving the 'Soybean Pivot' — U.S. farmers abandoning nitrogen-heavy corn (costs now $166/acre) for soybeans, with corn acreage intentions dropping 3.5% to 95.3 million acres. December corn futures surged to $4.85 while May soybean futures sit at $11.58.\n\nMeanwhile, U.S. ethanol is booming: the biofuel market is projected to exceed $41 billion in 2026 as EPA mandates hit record 26.81 billion RINs. Trump waived summer ethanol blend restrictions, allowing E15+ year-round. High gasoline prices ($3.98/gallon average) make ethanol economically compelling, but the corn-to-ethanol pipeline faces margin pressure from elevated feedstock costs."
+    },
+    "food_supply": {
+      "affected_countries": [
+        {
+          "iso3": "USA",
+          "food_security_impact": 4,
+          "population_at_risk": 8000000,
+          "primary_threats": [
+            "fertilizer cost inflation raising food prices",
+            "corn acreage shift to soybeans reducing supply",
+            "food-at-home inflation rising ~2 percentage points"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "IRN",
+          "food_security_impact": 8,
+          "population_at_risk": 25000000,
+          "primary_threats": [
+            "agricultural infrastructure destroyed",
+            "sanctions blocking food imports",
+            "internal displacement disrupting supply chains"
+          ],
+          "is_food_desert": true
+        },
+        {
+          "iso3": "IND",
+          "food_security_impact": 5,
+          "population_at_risk": 40000000,
+          "primary_threats": [
+            "fertilizer import dependency on Gulf producers",
+            "urea price spike reducing application rates",
+            "wheat and rice production costs increasing"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "BRA",
+          "food_security_impact": 2,
+          "population_at_risk": 0,
+          "primary_threats": [
+            "soybean export boom creating domestic price pressure"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "YEM",
+          "food_security_impact": 9,
+          "population_at_risk": 21000000,
+          "primary_threats": [
+            "Gulf shipping disruption cuts food imports",
+            "90% food import dependency",
+            "humanitarian corridors blocked"
+          ],
+          "is_food_desert": true
+        },
+        {
+          "iso3": "CHN",
+          "food_security_impact": 3,
+          "population_at_risk": 15000000,
+          "primary_threats": [
+            "fertilizer import disruption via Hormuz",
+            "soybean supply chain uncertainty",
+            "grain reserve drawdown"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "SAU",
+          "food_security_impact": 4,
+          "population_at_risk": 5000000,
+          "primary_threats": [
+            "90% food import dependency",
+            "Gulf shipping disruption",
+            "water desalination energy costs"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "LBN",
+          "food_security_impact": 7,
+          "population_at_risk": 3000000,
+          "primary_threats": [
+            "port infrastructure damaged",
+            "currency collapse limiting imports",
+            "wheat supply disruption"
+          ],
+          "is_food_desert": true
+        },
+        {
+          "iso3": "IRQ",
+          "food_security_impact": 5,
+          "population_at_risk": 8000000,
+          "primary_threats": [
+            "cross-border trade disrupted",
+            "agricultural infrastructure damage",
+            "fertilizer shortages"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "PAK",
+          "food_security_impact": 4,
+          "population_at_risk": 12000000,
+          "primary_threats": [
+            "fertilizer price spike",
+            "energy costs for irrigation",
+            "wheat import delays"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "DEU",
+          "food_security_impact": 2,
+          "population_at_risk": 0,
+          "primary_threats": [
+            "food price inflation from energy costs",
+            "supply chain delays for imported goods"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "ARE",
+          "food_security_impact": 4,
+          "population_at_risk": 2000000,
+          "primary_threats": [
+            "85% food import dependency",
+            "Gulf shipping disruption",
+            "cold chain logistics affected"
+          ],
+          "is_food_desert": false
+        },
+        {
+          "iso3": "ISR",
+          "food_security_impact": 5,
+          "population_at_risk": 450000,
+          "primary_threats": [
+            "Northern agricultural regions (Galilee) under rocket threat — 30% harvest delayed",
+            "Fresh produce imports from Jordan/Egypt disrupted at border crossings",
+            "Fertilizer costs up 40% due to Hormuz disruption affecting potash exports",
+            "Water desalination plants operating at reduced capacity near conflict zones"
+          ],
+          "is_food_desert": false
+        }
+      ],
+      "supply_chain_disruptions": [
+        {
+          "from": [
+            56.27,
+            26.57
+          ],
+          "to": [
+            -90.05,
+            41.85
+          ],
+          "product": "Urea and nitrogen fertilizer",
+          "severity": 7
+        },
+        {
+          "from": [
+            56.27,
+            26.57
+          ],
+          "to": [
+            80.27,
+            13.08
+          ],
+          "product": "Urea and phosphates to India",
+          "severity": 6
+        },
+        {
+          "from": [
+            -90.05,
+            41.85
+          ],
+          "to": [
+            121.47,
+            31.23
+          ],
+          "product": "US soybeans (Soybean Diplomacy)",
+          "severity": 2
+        },
+        {
+          "from": [
+            -46.63,
+            -23.55
+          ],
+          "to": [
+            121.47,
+            31.23
+          ],
+          "product": "Brazilian corn and soybeans",
+          "severity": 2
+        }
+      ],
+      "narrative": "The ceasefire's most consequential agricultural effect is the fertilizer supply chain disruption. Approximately 27-30% of global fertilizer exports — urea, ammonia, phosphates, and sulfur — transit the Strait of Hormuz. With the strait still barely functional (8 ships on day one), nitrogen costs have reshaped 2026 U.S. planting decisions. One ton of urea now costs the equivalent of 126 bushels of corn, up 77% from December 2025's 75 bushels. U.S. ammonia prices are 41% higher than last March.\n\nThis 'Fertilizer Crunch' is driving the most significant acreage shift in years. The USDA reports corn acreage intentions dropped to 95.3 million acres — a 3.5% decrease — as farmers pivot to soybeans, which require less nitrogen fertilizer. This 'Soybean Pivot' is further amplified by 'Soybean Diplomacy' with China: facing an energy deficit, China agreed to massively increase U.S. soybean purchases, providing a price floor on CBOT.\n\nThe ceasefire offers a path to normalization. If Hormuz reaches 50% capacity within 30 days — the Eurasia Group estimate — fertilizer shipments could resume in time for late-season nitrogen top-dressing. However, IFPRI warns the lag effects are already locked in: planting decisions for 2026 are largely finalized, and any recovery in fertilizer availability arrives too late for corn acreage to adjust.\n\nFood-at-home inflation in the U.S. is estimated to rise approximately 2 percentage points according to Wolfe Research. Meanwhile, Yemen faces catastrophic food insecurity — 70% of the population — as Gulf shipping disruptions cut food imports to a nation 90% dependent on imported food."
+    },
+    "infrastructure": {
+      "affected_countries": [
+        {
+          "iso3": "IRN",
+          "infrastructure_risk": 9,
+          "systems_at_risk": [
+            "power",
+            "water",
+            "telecom",
+            "transport"
+          ],
+          "cascade_risk": 8
+        },
+        {
+          "iso3": "USA",
+          "infrastructure_risk": 2,
+          "systems_at_risk": [
+            "transport",
+            "digital"
+          ],
+          "cascade_risk": 2
+        },
+        {
+          "iso3": "ARE",
+          "infrastructure_risk": 4,
+          "systems_at_risk": [
+            "transport"
+          ],
+          "cascade_risk": 3
+        },
+        {
+          "iso3": "SAU",
+          "infrastructure_risk": 4,
+          "systems_at_risk": [
+            "transport"
+          ],
+          "cascade_risk": 3
+        },
+        {
+          "iso3": "LBN",
+          "infrastructure_risk": 7,
+          "systems_at_risk": [
+            "power",
+            "water",
+            "telecom"
+          ],
+          "cascade_risk": 7
+        },
+        {
+          "iso3": "IRQ",
+          "infrastructure_risk": 6,
+          "systems_at_risk": [
+            "power",
+            "transport",
+            "digital"
+          ],
+          "cascade_risk": 5
+        },
+        {
+          "iso3": "CHN",
+          "infrastructure_risk": 2,
+          "systems_at_risk": [
+            "transport"
+          ],
+          "cascade_risk": 2
+        },
+        {
+          "iso3": "IND",
+          "infrastructure_risk": 3,
+          "systems_at_risk": [
+            "power",
+            "transport"
+          ],
+          "cascade_risk": 3
+        },
+        {
+          "iso3": "PAK",
+          "infrastructure_risk": 4,
+          "systems_at_risk": [
+            "power",
+            "water"
+          ],
+          "cascade_risk": 4
+        },
+        {
+          "iso3": "DEU",
+          "infrastructure_risk": 2,
+          "systems_at_risk": [
+            "transport"
+          ],
+          "cascade_risk": 1
+        },
+        {
+          "iso3": "BRA",
+          "infrastructure_risk": 1,
+          "systems_at_risk": [
+            "transport"
+          ],
+          "cascade_risk": 1
+        },
+        {
+          "iso3": "YEM",
+          "infrastructure_risk": 9,
+          "systems_at_risk": [
+            "power",
+            "water",
+            "telecom",
+            "transport"
+          ],
+          "cascade_risk": 9
+        },
+        {
+          "iso3": "ISR",
+          "infrastructure_risk": 7,
+          "systems_at_risk": [
+            "power",
+            "telecom",
+            "transport",
+            "water"
+          ],
+          "cascade_risk": 6
+        }
+      ],
+      "outage_zones": [
+        {
+          "coordinates": [
+            51.39,
+            35.69
+          ],
+          "radius_km": 150,
+          "type": "power",
+          "severity": 8,
+          "population_affected": 15000000
+        },
+        {
+          "coordinates": [
+            52.68,
+            32.65
+          ],
+          "radius_km": 200,
+          "type": "water",
+          "severity": 7,
+          "population_affected": 10000000
+        },
+        {
+          "coordinates": [
+            56.27,
+            26.57
+          ],
+          "radius_km": 100,
+          "type": "transport",
+          "severity": 7,
+          "population_affected": 0
+        },
+        {
+          "coordinates": [
+            54.37,
+            24.45
+          ],
+          "radius_km": 60,
+          "type": "transport",
+          "severity": 4,
+          "population_affected": 3000000
+        },
+        {
+          "coordinates": [
+            35.5,
+            33.0
+          ],
+          "radius_km": 60,
+          "type": "power",
+          "severity": 6,
+          "population_affected": 320000
+        }
+      ],
+      "narrative": "The Strait of Hormuz remains the critical infrastructure bottleneck. Despite the ceasefire, maritime traffic recovery is proceeding far slower than markets hoped. Only 8 ships transited on the first day versus the pre-war average of 100-120 daily. The IEA described this as the 'largest supply disruption in the history of the global oil market,' with nearly 1 billion barrels lost by end of March — 600 million in crude and 350 million in refined products.\n\nSome 187 tankers carrying 172 million barrels of crude and refined products remain trapped inside the Persian Gulf, with 20,000 seafarers awaiting evacuation from stranded ships. Shipping insurance costs, which jumped over 300% during the conflict, remain elevated as insurers await clarity on mine-clearing operations and the security of the strait.\n\nInside Iran, the destruction is staggering. U.S. Central Command struck over 11,000 targets, damaging 67,414 civilian sites including 498 schools and 236 health facilities. Tehran experienced 'black rain' from oil infrastructure fires. Power grid capacity across central Iran has been reduced by an estimated 40%, affecting 15 million people. Water treatment infrastructure in Isfahan and Shiraz is operating at emergency capacity.\n\nThe recovery timeline for Hormuz is the key variable for global markets. The Eurasia Group estimates 50% capacity within 30 days of a formal agreement, but Iran's exploration of a toll system ($1-2M per ship) and cryptocurrency payment requirements could delay full normalization by months. UK PM Starmer's 35-40 nation coalition is working on a diplomatic framework for guaranteed passage."
+    },
+    "civilian_impact": {
+      "affected_countries": [
+        {
+          "iso3": "IRN",
+          "humanitarian_score": 9,
+          "displaced_estimate": 884000,
+          "health_risk": 9,
+          "vulnerable_groups": [
+            "schoolchildren (100+ killed at Minab)",
+            "hospital patients (236 health facilities hit)",
+            "displaced families",
+            "3.65M Afghan migrants at risk"
+          ]
+        },
+        {
+          "iso3": "LBN",
+          "humanitarian_score": 7,
+          "displaced_estimate": 200000,
+          "health_risk": 7,
+          "vulnerable_groups": [
+            "Syrian refugees",
+            "south Lebanon civilians",
+            "Beirut residents near strike zones"
+          ]
+        },
+        {
+          "iso3": "IRQ",
+          "humanitarian_score": 5,
+          "displaced_estimate": 50000,
+          "health_risk": 5,
+          "vulnerable_groups": [
+            "border communities",
+            "Kurdish populations",
+            "IDPs from prior conflicts"
+          ]
+        },
+        {
+          "iso3": "USA",
+          "humanitarian_score": 3,
+          "displaced_estimate": 0,
+          "health_risk": 2,
+          "vulnerable_groups": [
+            "military families (13 service members killed)",
+            "Iranian-American diaspora community"
+          ]
+        },
+        {
+          "iso3": "YEM",
+          "humanitarian_score": 9,
+          "displaced_estimate": 500000,
+          "health_risk": 9,
+          "vulnerable_groups": [
+            "food-insecure population (21M)",
+            "children under 5",
+            "pregnant women",
+            "displaced persons"
+          ]
+        },
+        {
+          "iso3": "SAU",
+          "humanitarian_score": 3,
+          "displaced_estimate": 10000,
+          "health_risk": 2,
+          "vulnerable_groups": [
+            "migrant workers",
+            "border communities",
+            "Yemeni refugees"
+          ]
+        },
+        {
+          "iso3": "PAK",
+          "humanitarian_score": 4,
+          "displaced_estimate": 80000,
+          "health_risk": 3,
+          "vulnerable_groups": [
+            "Afghan refugees (3.65M at risk)",
+            "Balochistan border communities",
+            "Iranian refugee influx"
+          ]
+        },
+        {
+          "iso3": "CHN",
+          "humanitarian_score": 1,
+          "displaced_estimate": 0,
+          "health_risk": 1,
+          "vulnerable_groups": [
+            "energy-dependent manufacturing workers"
+          ]
+        },
+        {
+          "iso3": "IND",
+          "humanitarian_score": 3,
+          "displaced_estimate": 0,
+          "health_risk": 2,
+          "vulnerable_groups": [
+            "farmers affected by fertilizer costs",
+            "energy-poor households",
+            "Indian nationals in Gulf states"
+          ]
+        },
+        {
+          "iso3": "DEU",
+          "humanitarian_score": 1,
+          "displaced_estimate": 0,
+          "health_risk": 1,
+          "vulnerable_groups": [
+            "energy-poor households",
+            "Iranian diaspora community"
+          ]
+        },
+        {
+          "iso3": "BRA",
+          "humanitarian_score": 1,
+          "displaced_estimate": 0,
+          "health_risk": 1,
+          "vulnerable_groups": [
+            "low-income households facing food price inflation"
+          ]
+        },
+        {
+          "iso3": "ARE",
+          "humanitarian_score": 3,
+          "displaced_estimate": 5000,
+          "health_risk": 2,
+          "vulnerable_groups": [
+            "migrant workers (90% of population)",
+            "stranded seafarers",
+            "transit refugees"
+          ]
+        },
+        {
+          "iso3": "ISR",
+          "humanitarian_score": 6,
+          "displaced_estimate": 68000,
+          "health_risk": 5,
+          "vulnerable_groups": [
+            "Northern border residents (80,000 evacuated since Oct 2023)",
+            "Bedouin communities in Negev with limited shelter access",
+            "Elderly in rocket-range communities lacking mobility for shelter",
+            "Foreign workers in agriculture sector unable to evacuate"
+          ]
+        }
+      ],
+      "displacement_flows": [
+        {
+          "from": [
+            51.39,
+            35.69
+          ],
+          "to": [
+            44.36,
+            33.31
+          ],
+          "estimated_people": 300000,
+          "urgency": "high"
+        },
+        {
+          "from": [
+            52.68,
+            32.65
+          ],
+          "to": [
+            51.67,
+            32.65
+          ],
+          "estimated_people": 250000,
+          "urgency": "high"
+        },
+        {
+          "from": [
+            57.32,
+            27.18
+          ],
+          "to": [
+            66.99,
+            30.18
+          ],
+          "estimated_people": 150000,
+          "urgency": "medium"
+        },
+        {
+          "from": [
+            35.5,
+            33.87
+          ],
+          "to": [
+            35.5,
+            33.35
+          ],
+          "estimated_people": 200000,
+          "urgency": "high"
+        },
+        {
+          "from": [
+            35.5,
+            33.1
+          ],
+          "to": [
+            34.8,
+            32.1
+          ],
+          "estimated_people": 68000,
+          "urgency": "high"
+        }
+      ],
+      "narrative": "The human cost of the 40-day war is devastating. At least 7,650 people were killed, including over 1,030 civilians documented by Hengaw. The HRANA organization recorded 3,636 deaths including 1,701 civilians, with at least 15% of casualties under age 18. The Minab School Strike — killing at least 175 civilians including over 100 schoolchildren — has been described as the largest child casualty event from a single U.S. strike since My Lai in 1968.\n\nThe ceasefire immediately halts casualties that were averaging approximately 190 deaths per day. Every day the ceasefire holds saves nearly 200 lives. However, the humanitarian crisis is far from over: 884,000+ people were displaced in just the first week of fighting, and 1.65 million existing refugees in Iran face compounded vulnerability. Some 3.65 million Afghan migrants living in Iran are at acute risk of secondary displacement.\n\nIn Lebanon, at least 1,784 people have been killed and 5,977 wounded by Israeli strikes. The disputed nature of the ceasefire's applicability to Lebanon means these casualties may continue. Across the broader region, 25+ people were killed in Gulf states including the UAE, Kuwait, Bahrain, Oman, and Saudi Arabia, while 109 were killed in Iraq.\n\nThe path to recovery requires immediate humanitarian access. With 498 schools and 236 health facilities damaged or destroyed inside Iran, the reconstruction need is immense. The U.S. military's 13 service member casualties have galvanized domestic political debate about the war's scope and objectives, adding pressure to solidify the ceasefire into a lasting peace agreement."
+    }
+  },
+  "synthesis": {
+    "cascading_risk_chain": "Hormuz closure → oil price shock + fertilizer supply disruption → U.S. Soybean Pivot away from corn → ethanol feedstock cost pressure → ceasefire triggers oil crash + market rally but Hormuz recovery lags → residual commodity volatility persists for months",
+    "most_affected_population": "884,000+ displaced Iranians and 21 million food-insecure Yemenis whose humanitarian access depends on Hormuz shipping recovery timeline",
+    "second_order_effect": "The 'Fertilizer Crunch of 2026' has locked in U.S. corn-to-soybean acreage shifts that cannot reverse even if Hormuz reopens — 2026 corn supply will be structurally tighter regardless of peace outcome, sustaining elevated ethanol feedstock costs",
+    "compound_risk_score": 52,
+    "narrative": "The USA-Iran ceasefire represents a pivotal inflection point — the first de-escalation signal in the most severe global energy disruption in history. The immediate market response was historic: oil crashed 16.4% in a single session while the Dow surged 1,325 points, recovering trillions in global equity value overnight. Airlines, shipping companies, and energy-dependent industries saw double-digit rebounds.\n\nHowever, the ceasefire does not equal recovery. The Strait of Hormuz remains effectively closed, with only 8 ships transiting on day one versus the normal 100-120. The 187 trapped tankers, 300%+ shipping insurance premiums, and Iran's proposed toll system mean full normalization is months away. Oil remains at $94-100 versus the pre-war $67, and the EIA doesn't project a return below $80 until Q3 2026.\n\nThe most structurally important cascading effect runs through agriculture. The Hormuz closure disrupted 27-30% of global fertilizer exports, driving urea from $500 to $650-800/mt. This irreversibly shifted U.S. planting decisions: corn acreage dropped 3.5% as farmers pivoted to less nitrogen-intensive soybeans. Even if fertilizer flows resume, these acreage decisions are locked — corn supply will be tighter in 2026 regardless. Ethanol producers face a squeeze: high gasoline prices ($3.98/gallon) boost demand, but elevated corn costs pressure margins.\n\nThe compound risk score of 52 reflects a crisis in active de-escalation: geopolitical risks remain elevated (fragile ceasefire, unresolved Lebanon front, nuclear impasse), but economic recovery is underway and the humanitarian bleeding has stopped. The critical variable is Hormuz recovery speed — every week of delay costs the global economy approximately $25 billion in disrupted trade."
+  },
+  "timeVariants": {
+    "1_day": {
+      "label": "1 Day",
+      "compound_risk_score": 78,
+      "summary": "Hours after ceasefire announcement. Oil in freefall as traders unwind war premiums. Hormuz still blocked at 8 ships/day. IDF on high alert, Lebanon front active. 884K displaced with no aid corridors yet. Maximum uncertainty on ceasefire durability.",
+      "country_impacts": {
+        "USA": 8,
+        "IRN": 10,
+        "ISR": 9,
+        "SAU": 7,
+        "ARE": 6,
+        "IRQ": 8,
+        "PAK": 5,
+        "CHN": 7,
+        "IND": 6,
+        "BRA": 4,
+        "DEU": 5,
+        "LBN": 9,
+        "YEM": 8
+      }
+    },
+    "1_week": {
+      "label": "1 Week",
+      "compound_risk_score": 72,
+      "summary": "Ceasefire fragile. Oil markets in freefall (-16%). Hormuz still restricted to 8 ships/day. 884K displaced with limited aid access. Lebanon front active. Maximum uncertainty.",
+      "country_impacts": {
+        "USA": 7,
+        "IRN": 9,
+        "ISR": 8,
+        "SAU": 6,
+        "ARE": 5,
+        "IRQ": 7,
+        "PAK": 5,
+        "CHN": 6,
+        "IND": 5,
+        "BRA": 3,
+        "DEU": 4,
+        "LBN": 8,
+        "YEM": 7
+      }
+    },
+    "1_month": {
+      "label": "1 Month",
+      "compound_risk_score": 52,
+      "summary": "Oil stabilizing near $94/bbl. Hormuz throughput recovering to 40 ships/day. Sanctions negotiations underway. Humanitarian corridors operational. 200K displaced returning home.",
+      "country_impacts": {
+        "USA": 5,
+        "IRN": 7,
+        "ISR": 6,
+        "SAU": 4,
+        "ARE": 4,
+        "IRQ": 5,
+        "PAK": 3,
+        "CHN": 5,
+        "IND": 4,
+        "BRA": 2,
+        "DEU": 3,
+        "LBN": 6,
+        "YEM": 6
+      }
+    },
+    "6_months": {
+      "label": "6 Months",
+      "compound_risk_score": 35,
+      "summary": "Oil prices normalized ($78-82/bbl). Iran nuclear framework talks progressing. Hormuz fully operational. Agricultural commodity prices at pre-conflict levels. Major reconstruction underway in Iran. 650K displaced resettled.",
+      "country_impacts": {
+        "USA": 3,
+        "IRN": 5,
+        "ISR": 4,
+        "SAU": 3,
+        "ARE": 2,
+        "IRQ": 3,
+        "PAK": 2,
+        "CHN": 3,
+        "IND": 2,
+        "BRA": 1,
+        "DEU": 2,
+        "LBN": 4,
+        "YEM": 5
+      }
+    },
+    "1_year": {
+      "label": "1 Year",
+      "compound_risk_score": 22,
+      "summary": "Regional stability significantly improved. Iran partial sanctions relief in effect. Oil at $72/bbl. Trade routes fully restored. Israel-Lebanon border normalized under UN framework. Economic growth resuming across Gulf states. Yemen peace talks accelerated.",
+      "country_impacts": {
+        "USA": 2,
+        "IRN": 3,
+        "ISR": 3,
+        "SAU": 2,
+        "ARE": 1,
+        "IRQ": 2,
+        "PAK": 1,
+        "CHN": 2,
+        "IND": 1,
+        "BRA": 1,
+        "DEU": 1,
+        "LBN": 3,
+        "YEM": 4
+      }
+    }
+  }
+}
